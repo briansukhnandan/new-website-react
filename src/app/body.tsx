@@ -5,6 +5,7 @@ import {
   Button, 
   Center, 
   IconButton, 
+  Image, 
   ListItem, 
   Table, 
   TableCaption,
@@ -247,7 +248,7 @@ const ProjectsAndHackathonsBody = () => {
                 <Td>
                   This Global Game Jam was focused around the theme of Repair 
                   and sustainability. Worked in a team of 3 to design a 2D Top-Down RPG 
-                  named &quot;Shuttle Trouble&quot; based around the idea of repairing a space ship. 
+                  named &quot;Shuttle Trouble" based around the idea of repairing a space ship. 
                   Features a handful of scripts written in C# to enhance gameplay such 
                   as a combat system, bosses/enemies, etc.
                 </Td>
@@ -263,8 +264,8 @@ const ProjectsAndHackathonsBody = () => {
 
 const ContactInfoAndLinks = () => {
   const iconMap = {
-    GITHUB: <img src="/images/icons/github.svg" width="32" height="32" />,
-    LINKEDIN: <img src="/images/icons/linkedin.svg" width="32" height="32" />
+    GITHUB: <Image src="/images/icons/github.svg" width="32" height="32" />,
+    LINKEDIN: <Image src="/images/icons/linkedin.svg" width="32" height="32" />
   };
 
   return (
