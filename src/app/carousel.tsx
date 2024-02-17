@@ -1,16 +1,18 @@
 "use client"
-import { useState } from "react";
+import { Image } from "@chakra-ui/react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-const imageIdxToImagePath = (idx: number) => `/images/carousel/${idx+1}.png`;
+const IMAGES = [
+  "/images/carousel/1.png",
+  "/images/carousel/2.png",
+  "/images/carousel/3.png",
+];
+
 export const ImageCarousel = () => {
-  const [imageIdx, setImageIdx] = useState(0);
   return (
-    <div>
-      <img 
-        src={imageIdxToImagePath(imageIdx)} 
-        width="350" 
-        height="300"
-      />
-    </div>
-  )
+    <Carousel infiniteLoop autoPlay>
+      { IMAGES.map(image => <Image src={image} height="275px" />) }
+    </Carousel>
+  );
 }

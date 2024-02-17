@@ -1,18 +1,33 @@
-import { ImageCarousel } from "./carousel";
+import { Box } from "@chakra-ui/react";
+import { Body } from "./body";
 
 export default function Home() {
   return (
     <main>
-      <OpeningHtmlTag />
-      <Header />
-      <Body />
-      <ClosingHtmlTag/>
+      <PageLayout>
+        <OpeningHtmlTag />
+        <Header />
+        <Body />
+        <ClosingHtmlTag/>
+      </PageLayout>
     </main>
   );
 }
 
+const PageLayout = ({ children }: { children: React.ReactNode }) => {
+  /** 
+   * This website is small enough to where I can justify 
+   * not setting up a theme.
+   */
+  return (
+    <Box bg="blackAlpha.800" color="#ffffdb" h='calc(100vh)'>
+      { children }
+    </Box>
+  )
+}
+
 const Header = () => (
-  <div style={{ textAlign: "center", paddingTop: "10px" }}>
+  <Box sx={{ textAlign: "center", paddingTop: "10px" }}>
     <pre>
       __________       .__                <br/>
       \______   \______|__|____    ____   <br/>
@@ -21,27 +36,19 @@ const Header = () => (
       |________/ |__|  |__(____  /___|  / <br/>
       ________________________ \/     \/  <br/>
     </pre>
-  </div>
+  </Box>
 );
 
 
-const Body = () => {
-  return (
-    <div style={{ textAlign: "center", paddingTop: "15px" }}>
-      <ImageCarousel />
-    </div>
-  )
-}
-
 const OpeningHtmlTag = () => (
-  <div style={{ textAlign: "right" }}>
+  <Box style={{ textAlign: "right" }}>
     {"<Brian>"}
-  </div>
+  </Box>
 );
 
 const ClosingHtmlTag = () => (
-  <div style={{ textAlign: "left" }}>
+  <Box style={{ textAlign: "left" }}>
     {"</Brian>"}
-  </div>
+  </Box>
 );
 
