@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react";
-import { Box, Button, Center, Flex, Stack, Table, TableCaption, TableContainer, Tbody, Td, Text, Th, Thead, Tr, VStack } from "@chakra-ui/react"
+import { Box, Button, Center, Flex, IconButton, Stack, Table, TableCaption, TableContainer, Tbody, Td, Text, Th, Thead, Tooltip, Tr, VStack } from "@chakra-ui/react"
 import { ImageCarousel } from "./carousel"
 
 export const Body = () => {
@@ -207,9 +207,48 @@ const ProjectsAndHackathonsBody = () => {
 }
 
 const ContactInfoAndLinks = () => {
+  const iconMap = {
+    GITHUB: <img src="/images/icons/github.svg" width="32" height="32" />,
+    LINKEDIN: <img src="/images/icons/linkedin.svg" width="32" height="32" />
+  };
+
   return (
-    <Center>
-      TODO
+    <Center paddingTop={"12px"}>
+      <Box borderWidth={"2px"} borderRadius={"5px"} padding="8px">
+        <Box display={"flex"} gap={"8px"}>
+          <IconButton 
+            aria-label="Github Icon" 
+            icon={iconMap["GITHUB"]} 
+            onClick={() => window.open("https://github.com/briansukhnandan")}
+          />
+          <IconButton 
+            aria-label="LinkedIn Icon" 
+            icon={iconMap["LINKEDIN"]} 
+            onClick={() => window.open("https://linkedin.com/in/briansukhnandan")}
+          />
+        </Box>
+        <Box paddingTop={"8px"}>
+          <Tooltip 
+            label={(
+              <Box textAlign={"center"}>
+                Email: briansukhnandan@gmail.com
+                <br/>
+                Click to copy!
+              </Box>
+            )}
+          >
+            <Button 
+              size={"sm"} 
+              justifyContent={"center"}
+              onClick={() => {
+                navigator.clipboard.writeText("briansukhnandan@gmail.com");
+              }}
+            >
+              Email Me!
+            </Button>
+          </Tooltip>
+        </Box>
+      </Box>
     </Center>
   )
 }
