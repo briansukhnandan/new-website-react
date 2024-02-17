@@ -1,6 +1,23 @@
 "use client"
 import { useState } from "react";
-import { Box, Button, Center, Flex, IconButton, Stack, Table, TableCaption, TableContainer, Tbody, Td, Text, Th, Thead, Tooltip, Tr, VStack } from "@chakra-ui/react"
+import { 
+  Box, 
+  Button, 
+  Center, 
+  IconButton, 
+  ListItem, 
+  Table, 
+  TableCaption,
+  TableContainer, 
+  Tbody, 
+  Td, 
+  Text, 
+  Th, 
+  Thead, 
+  Tooltip, 
+  Tr, 
+  UnorderedList, 
+} from "@chakra-ui/react"
 import { ImageCarousel } from "./carousel"
 
 export const Body = () => {
@@ -70,16 +87,54 @@ const AboutMeBody = () => {
     </Box>
     <Text fontSize="xl" as="u">About Me!</Text>
     <Text fontSize="sm">
-      {"I'm a Software Engineer currently living in the 💖 of Queens, NY."}
+      {"I'm a Software Engineer currently living my best life in the 💖 of Queens, NY."}
     </Text>
     <Box sx={{paddingTop: "6px"}}>
       <Text fontSize="sm">
-        {"When I'm not programming, some of my hobbies include:"}
+        {"When I'm not programming, some of my other hobbies include:"}
       </Text>
-      <Text fontSize="xs">{"• bass guitar"}</Text>
       <Text fontSize="xs">{"• railfanning"}</Text>
-      <Text fontSize="xs">{"• watching horror movies"}</Text>
-      <Text fontSize="xs">{"• and most importantly, gaming"}</Text>
+      <Text fontSize="xs">{"• playing bass guitar"}</Text>
+      <Tooltip 
+        label={
+          <Box>
+            Some of my favorites are (this was hard to pick):
+            <UnorderedList>
+              <ListItem>Texas Chainsaw Massacre</ListItem>
+              <ListItem>Scream (all of them)</ListItem>
+              <ListItem>Hell House LLC</ListItem>
+              <ListItem>Child's Play</ListItem>
+              <ListItem>Halloween</ListItem>
+            </UnorderedList>           
+          </Box>
+        }
+      >
+        <Text color="orange" fontSize="xs">
+          {"• watching horror movies"}
+        </Text>
+      </Tooltip>
+      <Text fontSize="xs">{"• devouring chopped cheeses"}</Text>
+      <Tooltip 
+        label={
+          <Box>
+            Some of my favorite games are:
+            <UnorderedList>
+              <ListItem>Super Mario Sunshine</ListItem>
+              <ListItem>TLoZ: Majoras Mask</ListItem>
+              <ListItem>TLoZ: Ocarina of Time</ListItem>
+              <ListItem>Persona 3: FES</ListItem>
+              <ListItem>Final Fantasy X</ListItem>
+            </UnorderedList>
+          </Box>
+        }
+      >
+        <Text 
+          color="tomato" 
+          fontSize="xs"
+        >
+          {"• and most importantly, gaming 🔪"}
+        </Text>
+      </Tooltip>
     </Box>
   </Box>)
 }
