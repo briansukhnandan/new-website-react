@@ -20,7 +20,7 @@ const PageLayout = ({ children }: { children: React.ReactNode }) => {
    * not setting up a theme.
    */
   return (
-    <Box bg="blackAlpha.800" color="#ffffdb" h='calc(100vh)'>
+    <Box bg="#1c1c19" color="#ffffdb" h='calc(100vh)'>
       { children }
     </Box>
   )
@@ -39,7 +39,6 @@ const Header = () => (
   </Box>
 );
 
-
 const OpeningHtmlTag = () => (
   <Box style={{ textAlign: "right" }}>
     {"<Brian>"}
@@ -47,7 +46,13 @@ const OpeningHtmlTag = () => (
 );
 
 const ClosingHtmlTag = () => (
-  <Box style={{ textAlign: "left" }}>
+  <Box 
+    style={{ 
+      textAlign: "left", 
+      position: "absolute", 
+      bottom: "0px" 
+    }}
+  >
     {"</Brian>"}
   </Box>
 );

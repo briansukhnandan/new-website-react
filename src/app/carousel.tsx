@@ -9,10 +9,8 @@ const IMAGES = [
   "/images/carousel/3.png",
 ];
 
-export const ImageCarousel = () => {
-  return (
-    <Carousel infiniteLoop autoPlay>
-      { IMAGES.map(image => <Image src={image} height="275px" />) }
-    </Carousel>
-  );
-}
+export const ImageCarousel = () => (
+  <Carousel infiniteLoop autoPlay>
+    { IMAGES.map(image => <Image src={image} height="275px" />) }
+  </Carousel>
+);

@@ -12,5 +12,7 @@ const theme = extendTheme({
 });
 
 export const Providers = ({ children }: { children: React.ReactNode }) => (
-  <ChakraProvider theme={theme}>{ children }</ChakraProvider>
+  <ChakraProvider theme={theme}>
+    { children }
+  </ChakraProvider>
 );
