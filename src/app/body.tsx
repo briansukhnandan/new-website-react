@@ -40,13 +40,14 @@ export const Body = () => {
             size="xs"
             variant="link"
             colorScheme="green"
-            onClick={() => setBodyIdx(2)}
+            onClick={() => setShowContactInfo(!showContactInfo)}
             paddingLeft="12px"
           >
             Contact + Links
           </Button>
         </Box>
       </Center>
+      { showContactInfo && <ContactInfoAndLinks /> }
       { getBodyContent(bodyIdx) }
     </Box>
   )
@@ -203,4 +204,12 @@ const ProjectsAndHackathonsBody = () => {
       </Box>
     </Box>
   );
+}
+
+const ContactInfoAndLinks = () => {
+  return (
+    <Center>
+      TODO
+    </Center>
+  )
 }
