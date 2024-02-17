@@ -3,13 +3,22 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      Brian Sukhnandan
+      <Header />
     </main>
   );
 }
 
 const Header = () => {
   return (
-    <div>Brian Sukhnandan</div>
+    <div>
+      <pre>
+        __________        .__               <br/>
+        \______   \_______|__|____    ____  <br/>
+        |    |  _/\_  __ \  \__  \  /    \  <br/>
+        |    |   \ |  | \/  |/ __ \|   |  \ <br/>
+        |________/ |__|  |__(____  /___|  / <br/>
+        ________________________ \/     \/ <br/>
+      </pre>
+    </div>
   )
 }
