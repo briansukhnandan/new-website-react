@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ImageCarousel } from "./carousel";
 
 export default function Home() {
   return (
@@ -27,8 +27,8 @@ const Header = () => (
 
 const Body = () => {
   return (
-    <div style={{ textAlign: "center" }}>
-      {"TODO"}
+    <div style={{ textAlign: "center", paddingTop: "15px" }}>
+      <ImageCarousel />
     </div>
   )
 }
@@ -44,3 +44,4 @@ const ClosingHtmlTag = () => (
     {"</Brian>"}
   </div>
 );
+
