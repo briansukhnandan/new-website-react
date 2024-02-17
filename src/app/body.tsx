@@ -103,7 +103,7 @@ const AboutMeBody = () => {
               <ListItem>Texas Chainsaw Massacre</ListItem>
               <ListItem>Scream (all of them)</ListItem>
               <ListItem>Hell House LLC</ListItem>
-              <ListItem>Child's Play</ListItem>
+              <ListItem>Child&apos;s Play</ListItem>
               <ListItem>Halloween</ListItem>
             </UnorderedList>           
           </Box>
@@ -174,7 +174,7 @@ const ProjectsAndHackathonsBody = () => {
               <Td>seatv</Td>
               <Td>
                 A Letterboxd clone but for TV shows. Pulls information regarding 
-                TV shows from TheMovieDB's API.
+                TV shows from TheMovieDB&apos;s API.
               </Td>
               <Td>React, Express, TypeScript</Td>
             </Tr>
@@ -217,7 +217,7 @@ const ProjectsAndHackathonsBody = () => {
                   neighborhood Dumbo in Brooklyn without hindering any small 
                   businesses. We created a map of Dumbo which used LED strips 
                   (controlled by the Arduino) to represent open businesses 
-                  to ensure that construction wouldn't hinder them.
+                  to ensure that construction wouldn&apos;t hinder them.
                 </Td>
                 <Td>Arduino, C++</Td>
               </Tr>
@@ -247,7 +247,7 @@ const ProjectsAndHackathonsBody = () => {
                 <Td>
                   This Global Game Jam was focused around the theme of Repair 
                   and sustainability. Worked in a team of 3 to design a 2D Top-Down RPG 
-                  named "Shuttle Trouble" based around the idea of repairing a space ship. 
+                  named &quot;Shuttle Trouble&quot; based around the idea of repairing a space ship. 
                   Features a handful of scripts written in C# to enhance gameplay such 
                   as a combat system, bosses/enemies, etc.
                 </Td>
