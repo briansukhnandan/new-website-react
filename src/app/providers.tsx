@@ -8,7 +8,14 @@ const config: ThemeConfig = {
 }
 
 const theme = extendTheme({
-  config
+  config,
+  styles: {
+    global: () => ({
+      body: {
+        bg: ""
+      },
+    }),
+  },
 });
 
 export const Providers = ({ children }: { children: React.ReactNode }) => (

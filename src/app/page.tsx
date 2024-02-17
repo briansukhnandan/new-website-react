@@ -20,7 +20,7 @@ const PageLayout = ({ children }: { children: React.ReactNode }) => {
    * not setting up a theme.
    */
   return (
-    <Box bg="#1c1c19" color="#ffffdb" h='calc(100vh)'>
+    <Box h='calc(100vh)'>
       { children }
     </Box>
   )
