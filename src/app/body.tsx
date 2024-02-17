@@ -264,8 +264,8 @@ const ProjectsAndHackathonsBody = () => {
 
 const ContactInfoAndLinks = () => {
   const iconMap = {
-    GITHUB: <Image src="/images/icons/github.svg" width="32" height="32" />,
-    LINKEDIN: <Image src="/images/icons/linkedin.svg" width="32" height="32" />
+    GITHUB: <Image src="/images/icons/github.svg" width="32" height="32" alt="github" />,
+    LINKEDIN: <Image src="/images/icons/linkedin.svg" width="32" height="32" alt="linkedin" />
   };
 
   return (
