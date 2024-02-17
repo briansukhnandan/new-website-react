@@ -11,6 +11,6 @@ const IMAGES = [
 
 export const ImageCarousel = () => (
   <Carousel infiniteLoop autoPlay>
-    { IMAGES.map(image => <Image src={image} height="275px" />) }
+    { IMAGES.map(image => <Image key={image} src={image} height="275px" />) }
   </Carousel>
 );
