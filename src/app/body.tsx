@@ -68,13 +68,31 @@ export const Body = () => {
       </Center>
       { showContactInfo && <ContactInfoAndLinks /> }
       { getBodyContent(bodyIdx) }
-      <Center 
-        paddingTop="50px"
-        paddingBottom="5px"
-        fontSize={"small"}
-      >
-        <Quotes />
-      </Center>
+      <Box paddingTop={"50px"} paddingBottom={"5px"}>
+        <Center
+          fontSize={"small"}
+          background="
+            linear-gradient(
+              to right,
+              #ff5722,
+              #f9a825,
+              #eeff41,
+              #43a047,
+              #26c6da,
+              #2196f3,
+              #7e57c2,
+              #f48fb1,
+              #ef5350
+            )
+          "
+          sx={{
+            "-webkit-background-clip": "text",
+            "-webkit-text-fill-color": "transparent"
+          }}
+        >
+          <Quotes />
+        </Center>
+      </Box>
     </Box>
   )
 }
