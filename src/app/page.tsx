@@ -16,8 +16,8 @@ export default function Home() {
 
 const PageLayout = ({ children }: { children: React.ReactNode }) => {
   /** 
-   * This website is small enough to where I can justify 
-   * not setting up a theme.
+   * currently this is so that the ClosingHtmlTag stays at 
+   * the bottom of the page.
    */
   return (
     <Box h='calc(100vh)'>
@@ -49,7 +49,6 @@ const ClosingHtmlTag = () => (
   <Box 
     style={{ 
       textAlign: "left", 
-      position: "absolute", 
       bottom: "0px" 
     }}
   >

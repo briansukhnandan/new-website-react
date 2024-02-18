@@ -20,6 +20,7 @@ import {
   UnorderedList, 
 } from "@chakra-ui/react"
 import { ImageCarousel } from "./carousel"
+import { Quotes } from "./quotes";
 
 export const Body = () => {
   const [bodyIdx, setBodyIdx] = useState(0);
@@ -67,6 +68,13 @@ export const Body = () => {
       </Center>
       { showContactInfo && <ContactInfoAndLinks /> }
       { getBodyContent(bodyIdx) }
+      <Center 
+        paddingTop="50px"
+        paddingBottom="5px"
+        fontSize={"small"}
+      >
+        <Quotes />
+      </Center>
     </Box>
   )
 }
@@ -86,7 +94,7 @@ const AboutMeBody = () => {
       }}>
       <ImageCarousel />
     </Box>
-    <Text fontSize="xl" as="u">About Me!</Text>
+    <Text fontSize="xl">About Me!</Text>
     <Text fontSize="sm">
       {"I'm a Software Engineer currently living my best life in the 💖 of Queens, NY."}
     </Text>
