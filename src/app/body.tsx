@@ -75,10 +75,8 @@ export const Body = () => {
             linear-gradient(
               to right,
               #ff5722,
-              #f9a825,
               #eeff41,
               #43a047,
-              #26c6da,
               #2196f3,
               #7e57c2,
               #f48fb1,
