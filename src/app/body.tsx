@@ -40,7 +40,7 @@ export const Body = () => {
             colorScheme="red"
             onClick={() => setBodyIdx(BodyPageIndices.ABOUT_ME)}
           >
-            About Me
+            Home
           </Button>
           <Button 
             size="xs"
