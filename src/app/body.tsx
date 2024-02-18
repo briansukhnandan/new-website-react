@@ -62,7 +62,7 @@ export const Body = () => {
             onClick={() => setShowContactInfo(!showContactInfo)}
             paddingLeft="12px"
           >
-            Contact + Links
+            Contact
           </Button>
         </Box>
       </Center>
@@ -101,65 +101,83 @@ const getBodyContent = (bodyIdx: number) => ({
 })[bodyIdx];
 
 const AboutMeBody = () => {
+  const [showInfoSuggestion, setShowInfoSuggestion] = useState(false);
   return (<Box textAlign={"center"} width="75%" margin="auto">
-    <Box 
+    <Box
       sx={{ 
-        paddingTop: "20px", 
-        width: "400px", 
+        paddingTop: "20px",
+        width: "400px",
         margin: "auto"
       }}>
       <ImageCarousel />
     </Box>
-    <Text fontSize="xl">About Me!</Text>
-    <Text fontSize="sm">
-      {"I'm a Software Engineer currently living my best life in the 💖 of Queens, NY."}
-    </Text>
-    <Box sx={{paddingTop: "6px"}}>
+    <Box
+      onMouseEnter={() => setShowInfoSuggestion(true)} 
+      onMouseLeave={() => setShowInfoSuggestion(false)}
+    >
+      <Text fontSize="xl">About Me!</Text>
       <Text fontSize="sm">
-        {"When I'm not programming, some of my other hobbies include:"}
+        {"I'm a Software Engineer currently living my best life in the 💖 of Queens, NY."}
       </Text>
-      <Text fontSize="xs">{"• railfanning"}</Text>
-      <Text fontSize="xs">{"• playing bass guitar"}</Text>
-      <Tooltip 
-        label={
-          <Box>
-            Some of my favorites are (this was hard to pick):
-            <UnorderedList>
-              <ListItem>Texas Chainsaw Massacre</ListItem>
-              <ListItem>Scream (all of them)</ListItem>
-              <ListItem>Hell House LLC</ListItem>
-              <ListItem>Child&apos;s Play</ListItem>
-              <ListItem>Halloween</ListItem>
-            </UnorderedList>           
-          </Box>
-        }
-      >
-        <Text color="orange" fontSize="xs">
-          {"• watching horror movies"}
+      <Box sx={{paddingTop: "6px"}}>
+        <Text fontSize="sm">
+          {"When I'm not programming, some of my other hobbies include:"}
         </Text>
-      </Tooltip>
-      <Text fontSize="xs">{"• devouring chopped cheeses"}</Text>
-      <Tooltip 
-        label={
-          <Box>
-            Some of my favorite games are:
-            <UnorderedList>
-              <ListItem>Super Mario Sunshine</ListItem>
-              <ListItem>TLoZ: Majoras Mask</ListItem>
-              <ListItem>TLoZ: Ocarina of Time</ListItem>
-              <ListItem>Persona 3: FES</ListItem>
-              <ListItem>Final Fantasy X</ListItem>
-            </UnorderedList>
-          </Box>
-        }
-      >
-        <Text 
-          color="tomato" 
-          fontSize="xs"
+        <Text fontSize="xs">{"• railfanning"}</Text>
+        <Text fontSize="xs">{"• playing bass guitar"}</Text>
+        <Tooltip 
+          label={
+            <Box>
+              Some of my favorites are (this was hard to pick):
+              <UnorderedList>
+                <ListItem>Texas Chainsaw Massacre</ListItem>
+                <ListItem>Scream (all of them)</ListItem>
+                <ListItem>Hell House LLC</ListItem>
+                <ListItem>Child&apos;s Play</ListItem>
+                <ListItem>Halloween</ListItem>
+              </UnorderedList>
+            </Box>
+          }
         >
-          {"• and most importantly, gaming 🔪"}
-        </Text>
-      </Tooltip>
+          <Text color="orange" fontSize="xs">
+            {"• watching horror movies"}
+          </Text>
+        </Tooltip>
+        <Text fontSize="xs">{"• devouring chopped cheeses"}</Text>
+        <Tooltip
+          label={
+            <Box>
+              Some of my favorite games are:
+              <UnorderedList>
+                <ListItem>Super Mario Sunshine</ListItem>
+                <ListItem>TLoZ: Majoras Mask</ListItem>
+                <ListItem>TLoZ: Ocarina of Time</ListItem>
+                <ListItem>Persona 3: FES</ListItem>
+                <ListItem>Final Fantasy X</ListItem>
+              </UnorderedList>
+            </Box>
+          }
+        >
+          <Text 
+            color="tomato" 
+            fontSize="xs"
+          >
+            {"• and most importantly, gaming 🔪"}
+          </Text>
+        </Tooltip>
+        {showInfoSuggestion && (
+          <Center
+            position={"absolute"} 
+            paddingTop={"10px"}
+            left={"50%"}
+            transform={"translate(-50%, 0%)"}
+          >
+            <Text fontSize={"xx-small"} >
+              {"• any text colored above can be hovered over for more info!"}
+            </Text>
+          </Center>
+        )}
+      </Box>
     </Box>
   </Box>)
 }
