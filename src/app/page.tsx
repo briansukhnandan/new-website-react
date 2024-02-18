@@ -4,26 +4,12 @@ import { Body } from "./body";
 export default function Home() {
   return (
     <main>
-      <PageLayout>
-        <OpeningHtmlTag />
-        <Header />
-        <Body />
-        <ClosingHtmlTag/>
-      </PageLayout>
+      <OpeningHtmlTag />
+      <Header />
+      <Body />
+      <ClosingHtmlTag/>
     </main>
   );
-}
-
-const PageLayout = ({ children }: { children: React.ReactNode }) => {
-  /** 
-   * currently this is so that the ClosingHtmlTag stays at 
-   * the bottom of the page.
-   */
-  return (
-    <Box h='calc(100vh)'>
-      { children }
-    </Box>
-  )
 }
 
 const Header = () => (
