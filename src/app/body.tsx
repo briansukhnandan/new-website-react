@@ -22,8 +22,13 @@ import {
 import { ImageCarousel } from "./carousel"
 import { Quotes } from "./quotes";
 
+enum BodyPageIndices {
+  ABOUT_ME = 1,
+  PROJECTS = 2,
+}
+
 export const Body = () => {
-  const [bodyIdx, setBodyIdx] = useState(0);
+  const [bodyIdx, setBodyIdx] = useState(BodyPageIndices.ABOUT_ME);
   const [showContactInfo, setShowContactInfo] = useState(false);
   return (
     <Box>
@@ -33,7 +38,7 @@ export const Body = () => {
             size="xs"
             variant="link"
             colorScheme="red"
-            onClick={() => setBodyIdx(0)}
+            onClick={() => setBodyIdx(BodyPageIndices.ABOUT_ME)}
           >
             About Me
           </Button>
@@ -41,7 +46,7 @@ export const Body = () => {
             size="xs"
             variant="link"
             colorScheme="orange"
-            onClick={() => setBodyIdx(1)}
+            onClick={() => setBodyIdx(BodyPageIndices.PROJECTS)}
             paddingLeft="12px"
           >
             Projects
@@ -96,8 +101,8 @@ export const Body = () => {
 }
 
 const getBodyContent = (bodyIdx: number) => ({
-  0: <AboutMeBody />,
-  1: <ProjectsAndHackathonsBody />
+  [BodyPageIndices.ABOUT_ME]: <AboutMeBody />,
+  [BodyPageIndices.PROJECTS]: <ProjectsAndHackathonsBody />
 })[bodyIdx];
 
 const AboutMeBody = () => {
