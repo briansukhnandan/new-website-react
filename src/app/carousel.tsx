@@ -10,7 +10,16 @@ const IMAGES = [
 ];
 
 export const ImageCarousel = () => (
-  <Carousel infiniteLoop autoPlay>
-    { IMAGES.map(image => <Image alt="carouselImage" key={image} src={image} height="275px" />) }
+  <Carousel infiniteLoop autoPlay showStatus={false}>
+    {
+      IMAGES.map(image => (
+        <Image
+          alt="carouselImage"
+          key={image}
+          src={image}
+          height="275px"
+        />
+      ))
+    }
   </Carousel>
 );
