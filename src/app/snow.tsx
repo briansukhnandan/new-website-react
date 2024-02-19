@@ -6,7 +6,7 @@ export const SnowEffect = () => {
   return (
     <Snowfall
       radius={[0.3, 1]}
-      snowflakeCount={90}
+      snowflakeCount={60}
     />
   )
 }
