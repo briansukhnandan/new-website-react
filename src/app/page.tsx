@@ -1,10 +1,19 @@
+"use client"
+import { useState } from "react";
 import { Box } from "@chakra-ui/react";
 import { Body } from "./body";
+import { SnowEffect, ToggleSnowButton } from "./snow";
 
 export default function Home() {
+  const [showSnow, setShowSnow] = useState(true);
   return (
     <main>
+      {/** Keep SnowEffect as the top-most component */}
+      { showSnow ? <SnowEffect /> : null }
       <OpeningHtmlTag />
+      <ToggleSnowButton
+        toggleFn={() => setShowSnow(!showSnow)}
+      />
       <Header />
       <Body />
       <ClosingHtmlTag/>
@@ -35,7 +44,7 @@ const ClosingHtmlTag = () => (
   <Box 
     style={{ 
       textAlign: "right",
-      bottom: "0px" 
+      bottom: "0px"
     }}
   >
     {"</Brian>"}

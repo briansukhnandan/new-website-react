@@ -1,23 +1,23 @@
 "use client"
 import { useState } from "react";
-import { 
-  Box, 
-  Button, 
-  Center, 
-  IconButton, 
-  Image, 
-  ListItem, 
-  Table, 
+import {
+  Box,
+  Button,
+  Center,
+  IconButton,
+  Image,
+  ListItem,
+  Table,
   TableCaption,
-  TableContainer, 
-  Tbody, 
-  Td, 
-  Text, 
-  Th, 
-  Thead, 
-  Tooltip, 
-  Tr, 
-  UnorderedList, 
+  TableContainer,
+  Tbody,
+  Td,
+  Text,
+  Th,
+  Thead,
+  Tooltip,
+  Tr,
+  UnorderedList,
 } from "@chakra-ui/react"
 import { ImageCarousel } from "./carousel"
 import { Quotes } from "./quotes";
