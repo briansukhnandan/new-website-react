@@ -26,7 +26,7 @@ const Header = () => (
 );
 
 const OpeningHtmlTag = () => (
-  <Box style={{ textAlign: "right" }}>
+  <Box style={{ textAlign: "left" }}>
     {"<Brian>"}
   </Box>
 );
@@ -34,7 +34,7 @@ const OpeningHtmlTag = () => (
 const ClosingHtmlTag = () => (
   <Box 
     style={{ 
-      textAlign: "left", 
+      textAlign: "right",
       bottom: "0px" 
     }}
   >
