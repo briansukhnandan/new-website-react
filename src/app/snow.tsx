@@ -13,7 +13,11 @@ export const SnowEffect = () => {
 
 export const ToggleSnowButton = (props: { toggleFn: () => void }) => {
   return (
-    <Box paddingLeft={"15px"}>
+    <Box
+      position={"fixed"}
+      top={"5px"}
+      right={"5px"}
+    >
       <Button
         onClick={() => props.toggleFn()} 
         size={"xs"}
