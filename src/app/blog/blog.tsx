@@ -36,7 +36,7 @@ export const RailwayBlogBody = () => {
     </Box>
     <Center sx={{ pt: "24px", margin: "auto", width: "50%" }}>
       <Box sx={{ textAlign: "left" }}>
-        { formattedBlogs.map(blog => <BlogEntry blog={blog} />)}
+        { formattedBlogs.map(blog => <BlogEntry key={blog.title} blog={blog} />)}
       </Box>
     </Center>
     <Center>
@@ -58,7 +58,7 @@ const BlogEntry = ({ blog }: { blog: BlogEntry }) => {
     { blog.images?.length ? (
       <HStack spacing="10px" pt="15px">
         { blog.images.map(imageUrl => (
-          <Box sx={{ maxWidth: "50%", maxHeight: "50%" }}>
+          <Box key={imageUrl} sx={{ maxWidth: "50%", maxHeight: "50%" }}>
             <Image src={`images/blog/${imageUrl}`} />
           </Box>
         ))}
