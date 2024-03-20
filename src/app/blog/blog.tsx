@@ -59,7 +59,7 @@ const BlogEntry = ({ blog }: { blog: BlogEntry }) => {
       <HStack spacing="10px" pt="15px">
         { blog.images.map(imageUrl => (
           <Box key={imageUrl} sx={{ maxWidth: "50%", maxHeight: "50%" }}>
-            <Image src={`images/blog/${imageUrl}`} />
+            <Image src={`images/blog/${imageUrl}`} alt={""} />
           </Box>
         ))}
       </HStack>
