@@ -41,7 +41,7 @@ export const RailwayBlogBody = () => {
     <Center sx={{ pt: "24px", margin: "auto", width: "50%" }}>
       <VStack>
         { formattedBlogs.map((blog, idx) => (
-          <VStack>
+          <VStack key={blog.title}>
             <Box>
               <Button 
                 onClick={() => {
