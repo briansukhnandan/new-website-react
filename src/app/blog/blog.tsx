@@ -32,7 +32,7 @@ export const RailwayBlogBody = () => {
         pt: "16px" 
       }}
     >
-      <u>Brian's Railway Blog</u>
+      <u>{"Brian's Railway Blog"}</u>
     </Box>
     <Center sx={{ pt: "24px", margin: "auto", width: "50%" }}>
       <Box sx={{ textAlign: "left" }}>
