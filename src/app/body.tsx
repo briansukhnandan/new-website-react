@@ -21,10 +21,12 @@ import {
 } from "@chakra-ui/react"
 import { ImageCarousel } from "./carousel"
 import { Quotes } from "./quotes";
+import { RailwayBlogBody } from "./blog/blog";
 
 enum BodyPageIndices {
   ABOUT_ME = 1,
   PROJECTS = 2,
+  BLOG = 3,
 }
 
 export const Body = () => {
@@ -64,6 +66,15 @@ export const Body = () => {
             size="xs"
             variant="link"
             colorScheme="green"
+            onClick={() => setBodyIdx(BodyPageIndices.BLOG)}
+            paddingLeft="12px"
+          >
+            Blog
+          </Button>
+          <Button
+            size="xs"
+            variant="link"
+            colorScheme="blue"
             onClick={() => setShowContactInfo(!showContactInfo)}
             paddingLeft="12px"
           >
@@ -102,7 +113,8 @@ export const Body = () => {
 
 const getBodyContent = (bodyIdx: number) => ({
   [BodyPageIndices.ABOUT_ME]: <AboutMeBody />,
-  [BodyPageIndices.PROJECTS]: <ProjectsAndHackathonsBody />
+  [BodyPageIndices.PROJECTS]: <ProjectsAndHackathonsBody />,
+  [BodyPageIndices.BLOG]: <RailwayBlogBody />
 })[bodyIdx];
 
 const AboutMeBody = () => {
