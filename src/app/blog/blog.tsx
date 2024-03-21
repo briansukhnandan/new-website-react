@@ -25,7 +25,7 @@ const toBlogEntry = (rawBlog: any): BlogEntry => {
 }
 
 export const RailwayBlogBody = () => {
-  const formattedBlogs = blogs.map(blog => toBlogEntry(blog));
+  const formattedBlogs = blogs.map(blog => toBlogEntry(blog)).reverse();
   const [shownIdx, setShownIdx] = useState(formattedBlogs.map(_ => false));
   return (<>
     <Box 
