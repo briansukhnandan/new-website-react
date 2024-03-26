@@ -18,7 +18,7 @@ type BlogEntry = {
 };
 
 const toBlogEntry = (rawBlog: any): BlogEntry => {
-  if (rawBlog.title && rawBlog.body) {
+  if (rawBlog.title && rawBlog.body && rawBlog.date) {
     return rawBlog as BlogEntry;
   }
   throw new Error("Blog is invalid!");
