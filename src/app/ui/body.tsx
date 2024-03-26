@@ -21,7 +21,7 @@ import {
 } from "@chakra-ui/react"
 import { ImageCarousel } from "./carousel"
 import { Quotes } from "./quotes";
-import { RailwayBlogBody } from "./blog/blog";
+import { RailwayBlogBody } from "../blog/blog";
 
 enum BodyPageIndices {
   ABOUT_ME = 1,

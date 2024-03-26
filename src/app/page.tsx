@@ -1,8 +1,8 @@
 "use client"
 import { useState } from "react";
 import { Box } from "@chakra-ui/react";
-import { Body } from "./body";
-import { SnowEffect, ToggleSnowButton } from "./snow";
+import { Body } from "./ui/body";
+import { SnowEffect, ToggleSnowButton } from "./ui/snow";
 
 export default function Home() {
   const [showSnow, setShowSnow] = useState(true);
