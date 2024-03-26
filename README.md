@@ -7,5 +7,5 @@
 - My site is inspired slightly by Luke Smith (lukesmith.xyz), however I strive to have a little more "bloat" to my website than some would like.
 
 ## Adding a Blog Entry
-- Add an object entry to blog/blogs.json with a `title` and `body`.
+- Add an object entry to blog/blogs.json with a `title`, `date`, and `body`.
 - Optionally you can pass in an `images` key which is a string array containing paths to `public/images/blog/`.
