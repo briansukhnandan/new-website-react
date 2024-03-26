@@ -324,7 +324,8 @@ const ProjectsAndHackathonsBody = () => {
 const ContactInfoAndLinks = () => {
   const iconMap = {
     GITHUB: <Image src="/images/icons/github.svg" boxSize="32px" alt="github" />,
-    LINKEDIN: <Image src="/images/icons/linkedin.svg" boxSize="32px" alt="linkedin" />
+    LINKEDIN: <Image src="/images/icons/linkedin.svg" boxSize="32px" alt="linkedin" />,
+    YOUTUBE: <Image src="/images/icons/youtube.svg" boxSize="32px" alt="youtube" />
   };
 
   return (
@@ -341,6 +342,11 @@ const ContactInfoAndLinks = () => {
             icon={iconMap["LINKEDIN"]} 
             onClick={() => window.open("https://linkedin.com/in/briansukhnandan")}
           />
+          <IconButton 
+            aria-label="YouTube Icon" 
+            icon={iconMap["YOUTUBE"]} 
+            onClick={() => window.open("https://youtube.com/@deltaregalia")}
+          />
         </Box>
         <Box paddingTop={"8px"}>
           <Tooltip 
@@ -352,15 +358,17 @@ const ContactInfoAndLinks = () => {
               </Box>
             )}
           >
-            <Button 
-              size={"sm"} 
-              justifyContent={"center"}
-              onClick={() => {
-                navigator.clipboard.writeText("briansukhnandan@gmail.com");
-              }}
-            >
-              Email Me!
-            </Button>
+            <Center>
+              <Button 
+                width={"100%"}
+                size={"sm"}
+                onClick={() => {
+                  navigator.clipboard.writeText("briansukhnandan@gmail.com");
+                }}
+              >
+                Email Me!
+              </Button>
+            </Center>
           </Tooltip>
         </Box>
       </Box>
