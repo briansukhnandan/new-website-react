@@ -1,6 +1,7 @@
 # My Personal Website
-- Run with `npm run dev` after running `npm ci`
-- This site is deployed with Vercel
+- Run with `npm run dev` after running `npm ci`.
+- This site is deployed with Vercel.
+- In the case that the domain for this website expires, the backup URL is: `briansukhnandan-r520ufr3i-brian-sukhnandans-projects.vercel.app`.
 
 ## Motivation
 - I wanted a site a little more minimalistic. I felt my last personal website had a lot going on, not to mention the code itself was starting to get unmaintainable because it was developed when i was beginning to learn HTML/CSS/JS fully.
