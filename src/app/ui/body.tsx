@@ -78,7 +78,7 @@ export const Body = () => {
             onClick={() => setShowContactInfo(!showContactInfo)}
             paddingLeft="12px"
           >
-            Contact
+            Links
           </Button>
         </Box>
       </Center>
