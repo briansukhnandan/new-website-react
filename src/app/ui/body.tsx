@@ -199,9 +199,34 @@ const AboutMeBody = () => {
   </Box>)
 }
 
-const ProjectsAndHackathonsBody = () => {
+const HyperlinkedTableCell = ({
+  text,
+  url,
+  color,
+}: {
+  text: string,
+  url: string,
+  color: string,
+}) => {
   return (
-    <Box paddingTop={"20px"}>
+    <Td style={{ color }}>
+      <a href={url}>{ text }</a>
+    </Td>
+  )
+}
+
+const ProjectsAndHackathonsBody = () => {
+  const DEFAULT_LINK_COLOR = "#00ffd1";
+  return (
+    <Box paddingTop={2}>
+      <Box
+        textAlign={"center"}
+        color={DEFAULT_LINK_COLOR}
+        fontSize={"x-small"}
+        paddingBottom={4}
+      >
+        * text in this color can be clicked!
+      </Box>
       <TableContainer width="80%" sx={{ margin: "auto" }}>
         <Table variant="simple" size="sm">
           <TableCaption>Projects</TableCaption>
@@ -214,7 +239,11 @@ const ProjectsAndHackathonsBody = () => {
           </Thead>
           <Tbody>
             <Tr>
-              <Td>Chip-8 Emulator</Td>
+              <HyperlinkedTableCell
+                color={DEFAULT_LINK_COLOR}
+                text="Chip-8 Emulator"
+                url="https://github.com/briansukhnandan/chip8"
+              />
               <Td>
                 A Chip-8 emulator written in Python.Features ~95% opcode accuracy
                 and contains both unit tests as well as a testing ROM you can use to 
@@ -223,7 +252,11 @@ const ProjectsAndHackathonsBody = () => {
               <Td>Python</Td>
             </Tr>
             <Tr>
-              <Td>MCC Linux Mod Manager</Td>
+              <HyperlinkedTableCell
+                color={DEFAULT_LINK_COLOR}
+                text="MCC Linux Mod Manager"
+                url="https://github.com/briansukhnandan/MCC-Linux-ModManager"
+              />
               <Td>
                 A Mod Manager for Halo: The Master Chief Collection written in
                 pure Bash. Features support for Halo Reach, CE, 2, and 3.
@@ -231,7 +264,26 @@ const ProjectsAndHackathonsBody = () => {
               <Td>Bash</Td>
             </Tr>
             <Tr>
-              <Td>seatv</Td>
+              <HyperlinkedTableCell
+                color={DEFAULT_LINK_COLOR}
+                text="Solar System Simulator"
+                url="https://github.com/briansukhnandan/solar-system-simulator"
+              />
+              <Td>
+                A Solar System simulator written in React + Three Fiber. Allows for interactivity with Orbit Controls! See the README for more details.
+                <br />
+                <a href="https://solar-system-sim.vercel.app/" style={{ color: "#00ffd1" }}>
+                  Click here to see it live!
+                </a>
+              </Td>
+              <Td>React, Three Fiber</Td>
+            </Tr>
+            <Tr>
+              <HyperlinkedTableCell
+                color={DEFAULT_LINK_COLOR}
+                text="seatv (w.i.p)"
+                url="https://github.com/briansukhnandan/seatv"
+              />
               <Td>
                 A Letterboxd clone but for TV shows. Pulls information regarding 
                 TV shows from TheMovieDB&apos;s API.
@@ -239,7 +291,11 @@ const ProjectsAndHackathonsBody = () => {
               <Td>React, Express, TypeScript</Td>
             </Tr>
             <Tr>
-              <Td>FastGE</Td>
+              <HyperlinkedTableCell
+                color={DEFAULT_LINK_COLOR}
+                text="FastGE"
+                url="https://github.com/briansukhnandan/fastge"
+              />
               <Td>
                 A React App meant to display prices from the Grand Exchange in 
                 OldSchool RuneScape. Pulls prices once a day based on a cron schedule 
@@ -248,7 +304,11 @@ const ProjectsAndHackathonsBody = () => {
               <Td>React, Google Firebase, Bash</Td>
             </Tr>
             <Tr>
-              <Td>delta2A03 (w.i.p)</Td>
+              <HyperlinkedTableCell
+                color={DEFAULT_LINK_COLOR}
+                text="delta2A03 (w.i.p)"
+                url="https://github.com/briansukhnandan/delta2a03"
+              />
               <Td>
                 A clone of the 6502 CPU with slightly less functionality 
                 written in Rust.
