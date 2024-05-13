@@ -4,6 +4,7 @@ import {
   Box,
   Button,
   Center,
+  Flex,
   IconButton,
   Image,
   ListItem,
@@ -196,6 +197,19 @@ const AboutMeBody = () => {
         )}
       </Box>
     </Box>
+    <Center pt={12}>
+      <Flex flexDirection={"column"}>
+        <b>¯\_(ツ)_/¯</b>
+        <Box pt={2}>
+          <iframe
+            width="500"
+            height="280"
+            src="https://www.youtube.com/embed/videoseries?si=9f8n5Ghpq77fIwt6&amp;list=PLhaM41vCt1ey075rLPElsCHNV-worJkNV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </Box>
+      </Flex>
+    </Center>
   </Box>)
 }
 
