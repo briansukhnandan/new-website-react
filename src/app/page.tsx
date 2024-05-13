@@ -32,7 +32,7 @@ const Header = () => {
     setTimeout(() => 
       setColorIdx((colorIdx + 1) % colors.length)
     , 750);
-  }, [colorIdx]);
+  }, [colorIdx, colors]);
 
   return (
     <Box sx={{

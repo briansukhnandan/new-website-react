@@ -204,8 +204,9 @@ const AboutMeBody = () => {
           <iframe
             width="500"
             height="280"
-            src="https://www.youtube.com/embed/videoseries?si=9f8n5Ghpq77fIwt6&amp;list=PLhaM41vCt1ey075rLPElsCHNV-worJkNV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
+            src="https://www.youtube.com/embed/videoseries?si=9f8n5Ghpq77fIwt6&amp;list=PLhaM41vCt1ey075rLPElsCHNV-worJkNV" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          >
           </iframe>
         </Box>
       </Flex>
